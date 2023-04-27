@@ -16,7 +16,7 @@ public class ChatController {
 
     private final ChatRepository chatRepository;
 
-    // 귓속말 할때 사용하면 되요!!
+    // 귓속말
     @CrossOrigin
     @GetMapping(value = "/sender/{sender}/receiver/{receiver}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Chat> getMsg(@PathVariable String sender, @PathVariable String receiver) {
